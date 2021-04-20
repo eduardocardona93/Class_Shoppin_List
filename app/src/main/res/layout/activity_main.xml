@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/viewCartBtn"
+        android:layout_width="137dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="88dp"
+        android:text="View Cart"
+        app:backgroundTint="#4CAF50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/placeOrderBtn"
+        android:layout_width="137dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="82dp"
+        android:text="Place Order"
+        app:backgroundTint="#2196F3"
+        app:layout_constraintStart_toEndOf="@+id/viewCartBtn"
+        app:layout_constraintTop_toBottomOf="@+id/totalLbl" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Covid-19 supplies"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ListView
+        android:id="@+id/itemsLV"
+        android:layout_width="383dp"
+        android:layout_height="182dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <SeekBar
+        android:id="@+id/qtySb"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="273dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:max="100"
+        android:progress="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView1" />
+
+    <TextView
+        android:id="@+id/TextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="11dp"
+        android:text="Quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemsLV" />
+
+    <TextView
+        android:id="@+id/qtyLbl"
+        android:layout_width="67dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="47dp"
+        android:gravity="right"
+        android:text="1"
+        app:layout_constraintStart_toEndOf="@+id/qtySb"
+        app:layout_constraintTop_toBottomOf="@+id/itemsLV" />
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="137dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginLeft="136dp"
+        android:layout_marginTop="28dp"
+        android:text="Add to cart"
+        app:backgroundTint="#2196F3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qtySb" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="48dp"
+        android:text="Total Amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addBtn" />
+
+    <TextView
+        android:id="@+id/totalLbl"
+        android:layout_width="134dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="48dp"
+        android:gravity="end"
+        android:text="$0000000.00"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/addBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
